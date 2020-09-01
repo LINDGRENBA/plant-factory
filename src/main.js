@@ -1,8 +1,19 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import $ from "jquery";
-// import { Money } from './../src/money.js'; 
+import $ from "jquery
+";
+import './plants.js';
 
-$( document ).ready(function() {
+
+$(document).ready(function() {
+  $('#feed').click(function() {
+    const newState = stateControl(blueFood);
+    $('#soil-value').text(`Soil: ${newState.soil}`);
+  });
+
+  $("#show-state").click(function() {
+    const currentState = stateControl();
+    $('#soil-value').text(`Soil: ${currentState.soil}`);
+  });
 });
